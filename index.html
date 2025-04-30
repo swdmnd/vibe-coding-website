@@ -271,16 +271,16 @@
     </section>
   </div>
 
-  <div class="nav-dots" id="navDots">
-    <button class="nav-button" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-    <!-- Dots will be injected here -->
-    <button class="nav-button" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+  <div class="nav-dots">
+    <a href="https://wa.me/628117495444" target="_blank"
+      class="fixed bottom-5 right-5 bg-green-500 p-3 rounded-full shadow-lg">
+      <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" class="w-8 h-8">
+    </a>
   </div>
 
   <script>
     const slider = document.getElementById('slider');
     const slides = document.querySelectorAll('.slide');
-    const navDots = document.getElementById('navDots');
     const navLinks = document.querySelectorAll('nav a');
 
     let currentIndex = 0;
@@ -289,7 +289,6 @@
     const dotContainer = document.createElement('div');
     dotContainer.style.display = 'flex';
     dotContainer.style.gap = '1rem';
-    navDots.insertBefore(dotContainer, document.getElementById('nextBtn'));
 
     // Create navigation dots and assign click events
     slides.forEach((_, idx) => {
@@ -334,13 +333,6 @@
     document.getElementById('prevBtn').addEventListener('click', () => goToSlide(currentIndex - 1));
     document.getElementById('nextBtn').addEventListener('click', () => goToSlide(currentIndex + 1));
   </script>
-</body>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/628117495444" target="_blank"
-  class="fixed bottom-5 right-5 bg-green-500 p-3 rounded-full shadow-lg">
-  <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" class="w-8 h-8">
-</a>
 </body>
 
 </html>
